@@ -15,14 +15,12 @@ Platform assembly: D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\UnityEngi
 Loading D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.030 seconds
+- Completed reload, in  0.076 seconds
 Platform assembly: D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.567565 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 36c4 -> priority: 1 
-  Thread -> id: 36c8 -> priority: 1 
+UnloadTime: 1.735024 ms
+Object reference not set to an instance of an object
