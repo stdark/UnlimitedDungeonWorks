@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ExteriorObjectType {
+public enum ExteriorTileType {
     UNSET,
-    TREE,
-    STONE,
-    BRIDGE,
-    FLOWER,
-    ENTRANCE
+    GRASS,
+    WATER,
+    SAND,
+    LAVA,
+    ROAD
 }

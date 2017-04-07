@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ExteriorObjectType {
+public enum DiceType{
     UNSET,
-    TREE,
-    STONE,
-    BRIDGE,
-    FLOWER,
-    ENTRANCE
+    d4,
+    d6,
+    d8,
+    d10,
+    d12,
+    d20
 }

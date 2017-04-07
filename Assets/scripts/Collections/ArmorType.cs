@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ExteriorObjectType {
+public enum ArmorType
+{
     UNSET,
-    TREE,
-    STONE,
-    BRIDGE,
-    FLOWER,
-    ENTRANCE
+    LIGHT,
+    MEDIUM,
+    HARD
 }

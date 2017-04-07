@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ExteriorObjectType {
+public enum InteriorObjectType{
     UNSET,
-    TREE,
-    STONE,
-    BRIDGE,
-    FLOWER,
-    ENTRANCE
+    WALL,
+    OBJECT
 }

@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class TileBase : MonoBehaviour {
 
-    Texture2D texture;
-    int x, y;
-    int layerType;
+    public string name;
+    public Sprite sprite;
+    public LayerType layerType;
+
+    public TileBase() {
+        name = "";
+        sprite = new Sprite();
+        layerType = LayerType.UNSET;
+    }
+
 
 
 }
