@@ -1,9 +1,13 @@
-﻿public enum TileTypes{
-    GRASS = 0,
-    DIRT = 1,
-    SAND = 2,
-    WATER = 3,
-    LAVA = 4,
-    ROAD = 5
-	
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum TileType {
+    UNSET,
+    GRASS,
+    WATER,
+    SAND,
+    LAVA,
+    ROAD,
+    FLOOR
 }
