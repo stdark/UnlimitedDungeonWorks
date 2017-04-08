@@ -9,7 +9,7 @@ public class NetworkAdapter : MonoBehaviour {
     private const string host = "172.20.10.5";
     private const int port = 8888;
     static TcpClient client;
-    static NetworkStream stream;
+    NetworkStream stream;
     Thread th;
     MD5 md5;
     // Update is called once per frame
@@ -45,9 +45,8 @@ public class NetworkAdapter : MonoBehaviour {
         byte[] head = { 0x07, id, 0, (byte)x, (byte)y };
         byte body = n;
         //byte[] hash = md5.ComputeHash(Encoding.Unicode.GetBytes(Encoding.Unicode.GetString(head) + body.ToString()));
-
-        byte[] data = Encoding.Unicode.GetBytes(Encoding.Unicode.GetString(head) + body.ToString() );
-        stream.Write(data, 0, data.Length);
+        
+        stream.Write(Encoding.Unicode.GetBytes(Encoding.Unicode.GetString(head) + body.ToString()), 0, Encoding.Unicode.GetBytes(Encoding.Unicode.GetString(head) + body.ToString()).Length);
         
         
     }
