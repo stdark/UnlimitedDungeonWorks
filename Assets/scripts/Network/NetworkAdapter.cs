@@ -15,11 +15,18 @@ public class NetworkAdapter : MonoBehaviour {
     // Update is called once per frame
     private void Start()
     {
-        client = new TcpClient();
-        client.Connect(host, port);
-        stream = client.GetStream();
-        Thread receiveThread = new Thread(new ThreadStart(ReceiveMessage));
-        receiveThread.Start();
+        try
+        {
+            client = new TcpClient();
+            client.Connect(host, port);
+            stream = client.GetStream();
+            Thread receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+            receiveThread.Start();
+        }
+        catch
+        {
+
+        }
     }
     void Update () {
         
