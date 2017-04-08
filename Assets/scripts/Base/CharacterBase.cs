@@ -7,7 +7,7 @@ public class CharacterBase : MonoBehaviour {
     public string CharacterName;
     public RaceType CharacterRace;
     public ClassType CharacterClass;
-    NetworkAdapter go;
+    public NetworkAdapter go;
     public int Hits;
     public int Str, Agi, Vit, Int, Wis, Chr;
     public BoxCollider2D[] ObjectMass;
@@ -16,17 +16,18 @@ public class CharacterBase : MonoBehaviour {
 
     private void Start()
     {
-        go = GameObject.Find("NetworkAdapter").GetComponent<NetworkAdapter>();
+        
         ObjectMass = GameObject.Find("Object_obj").GetComponentsInChildren<BoxCollider2D>();
        
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow)) MoveUp();
-        else if (Input.GetKey(KeyCode.LeftArrow)) MoveLeft();
-        else if (Input.GetKey(KeyCode.DownArrow)) MoveDown();
-        else if (Input.GetKey(KeyCode.RightArrow)) MoveRight();
+        
+        if (Input.GetKeyDown(KeyCode.UpArrow)) MoveUp();
+        else if (Input.GetKeyDown(KeyCode.LeftArrow)) MoveLeft();
+        else if (Input.GetKeyDown(KeyCode.DownArrow)) MoveDown();
+        else if (Input.GetKeyDown(KeyCode.RightArrow)) MoveRight();
     }
     void MoveLeft()
     {
@@ -37,8 +38,8 @@ public class CharacterBase : MonoBehaviour {
             
             if (gameObject.transform.position.x == pgo.transform.position.x && gameObject.transform.position.y == pgo.transform.position.y) gameObject.transform.position -= new Vector3(-1.0f, 0);
         }
-        
-        go.SendMess();
+        go.SendPos(transform.position.x + 1.0f, transform.position.y, 0);
+
     }
     void MoveRight()
     {
@@ -48,7 +49,7 @@ public class CharacterBase : MonoBehaviour {
         {
             if (gameObject.transform.position.x == pgo.transform.position.x && gameObject.transform.position.y == pgo.transform.position.y) gameObject.transform.position -= new Vector3(1.0f, 0);
         }
-        go.SendMess();
+        go.SendPos(transform.position.x - 1.0f, transform.position.y, 1);
     }
     void MoveUp()
     {
@@ -57,7 +58,7 @@ public class CharacterBase : MonoBehaviour {
         {
             if (gameObject.transform.position.x == pgo.transform.position.x && gameObject.transform.position.y == pgo.transform.position.y) gameObject.transform.position -= new Vector3(0, 1.0f);
         }
-            go.SendMess();
+        go.SendPos(transform.position.x, transform.position.y - 1.0f, 2);
     }
     void MoveDown()
     {
@@ -66,7 +67,7 @@ public class CharacterBase : MonoBehaviour {
         {
             if (gameObject.transform.position.x == pgo.transform.position.x && gameObject.transform.position.y == pgo.transform.position.y) gameObject.transform.position -= new Vector3(0, -1.0f);
         }
-            go.SendMess();
+        go.SendPos(transform.position.x, transform.position.y + 1.0f, 3);
     }
     void MoveOnMouse()
     {
