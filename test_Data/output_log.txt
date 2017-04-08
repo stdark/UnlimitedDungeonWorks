@@ -15,12 +15,289 @@ Platform assembly: D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\UnityEngi
 Loading D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.076 seconds
+- Completed reload, in  0.054 seconds
 Platform assembly: D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Projects\UnlimitedDungeonWorks\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.735024 ms
-Object reference not set to an instance of an object
+UnloadTime: 1.421665 ms
+SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveLeft () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveLeft () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveRight () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveRight () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveLeft () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveRight () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveLeft () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveUp () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveRight () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveDown () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkAdapter.SendPos (Single x, Single y, Byte n) [0x00000] in <filename unknown>:0 
+  at CharacterBase.MoveRight () [0x00000] in <filename unknown>:0 
+  at CharacterBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 6b6c -> priority: 1 
+  Thread -> id: 4754 -> priority: 1 

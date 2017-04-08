@@ -42,12 +42,18 @@ public class NetworkAdapter : MonoBehaviour {
         //0x07 id-host 0 x y n hash
         byte id = 1;
 
-        byte[] head = { 0x07, id, 0, (byte)x, (byte)y };
-        byte body = n;
+        byte[] head = { 0x07, id, 0, byte.Parse(x.ToString()) , byte.Parse((-y).ToString()) };
+        byte[] body = { byte.Parse(n.ToString()) };
+        
+        
         //byte[] hash = md5.ComputeHash(Encoding.Unicode.GetBytes(Encoding.Unicode.GetString(head) + body.ToString()));
-        
-        stream.Write(Encoding.Unicode.GetBytes(Encoding.Unicode.GetString(head) + body.ToString()), 0, Encoding.Unicode.GetBytes(Encoding.Unicode.GetString(head) + body.ToString()).Length);
-        
+        string temp = "";
+        stream.Write(Encoding.ASCII.GetBytes(Encoding.ASCII.GetString(head) + Encoding.ASCII.GetString(body)), 0, Encoding.ASCII.GetBytes(Encoding.ASCII.GetString(head) + Encoding.ASCII.GetString(body)).Length);
+        foreach(byte b in Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(Encoding.ASCII.GetString(head) + Encoding.ASCII.GetString(body))))
+        {
+            temp += b.ToString() + " ";
+        }
+        Debug.Log(temp);
         
     }
     /*public void SendPos()
