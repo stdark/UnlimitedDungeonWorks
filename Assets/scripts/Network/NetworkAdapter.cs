@@ -18,7 +18,8 @@ public class NetworkAdapter : MonoBehaviour {
         client = new TcpClient();
         client.Connect(host, port);
         stream = client.GetStream();
-        
+        Thread receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+        receiveThread.Start();
     }
     void Update () {
         
@@ -65,5 +66,43 @@ public class NetworkAdapter : MonoBehaviour {
         Debug.Log(message);
         
     }*/
+
+    // получение сообщений
+    void ReceiveMessage()
+    {
+        while (true)
+        {
+            try
+            {
+                byte[] data = new byte[64]; // буфер для получаемых данных
+                StringBuilder builder = new StringBuilder();
+                int bytes = 0;
+                do
+                {
+                    bytes = stream.Read(data, 0, data.Length);
+                    builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                }
+                while (stream.DataAvailable);
+
+                string message = builder.ToString();
+                Debug.Log(message);//вывод сообщения
+            }
+            catch
+            {
+                Debug.Log("Подключение прервано!"); //соединение было прервано
+               
+                Disconnect();
+            }
+        }
+    }
+
+    void Disconnect()
+    {
+        if (stream != null)
+            stream.Close();//отключение потока
+        if (client != null)
+            client.Close();//отключение клиента
+        Environment.Exit(0); //завершение процесса
+    }
 
 }

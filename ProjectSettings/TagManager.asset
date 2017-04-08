@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obj
+  - Item
+  - Head
+  - Body
+  - Legs
+  - Shoes
+  - Ring
+  - Amulet
+  - Barding
+  - TH
+  - OH
+  - Shield
   layers:
   - Default
   - TransparentFX

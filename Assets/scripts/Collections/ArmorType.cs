@@ -5,7 +5,11 @@ using UnityEngine;
 public enum ArmorType
 {
     UNSET,
-    LIGHT,
-    MEDIUM,
-    HARD
+    HEAD,
+    BODY,
+    LEGS,
+    SHOES,
+    RING,
+    AMULET,
+    BARDING
 }

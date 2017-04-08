@@ -7,6 +7,7 @@ public class WeaponBase : ItemBase {
     public DamageType damageType;
     public int diceCount;
     public DiceType diceType;
+    
 
     public WeaponBase()
     {
