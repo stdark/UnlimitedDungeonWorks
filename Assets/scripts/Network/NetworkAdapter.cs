@@ -8,25 +8,23 @@ using UnityEngine;
 public class NetworkAdapter : MonoBehaviour {
     private const string host = "172.20.10.5";
     private const int port = 8888;
+    public GameObject mobToGen;
     static TcpClient client;
     NetworkStream stream;
     Thread th;
     MD5 md5;
+    string[] parsed;
+
+    bool isInBattle = false;
     // Update is called once per frame
     private void Start()
     {
-        try
-        {
             client = new TcpClient();
             client.Connect(host, port);
             stream = client.GetStream();
             Thread receiveThread = new Thread(new ThreadStart(ReceiveMessage));
             receiveThread.Start();
-        }
-        catch
-        {
-
-        }
+        
     }
     void Update () {
         
@@ -79,28 +77,53 @@ public class NetworkAdapter : MonoBehaviour {
     {
         while (true)
         {
-            try
-            {
+
                 byte[] data = new byte[64]; // буфер для получаемых данных
                 StringBuilder builder = new StringBuilder();
                 int bytes = 0;
                 do
                 {
                     bytes = stream.Read(data, 0, data.Length);
-                    builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                    builder.Append(Encoding.ASCII.GetString(data, 0, bytes));
                 }
                 while (stream.DataAvailable);
 
                 string message = builder.ToString();
                 Debug.Log(message);//вывод сообщения
-            }
-            catch
+
+            parsed = message.Split(' ');
+            if (isInBattle)
             {
+                parsed = null;
+            }
+            if (parsed[3] == "1")
+            {
+                
+                GenerateMob(parsed[5], parsed[6]);
+                if (parsed[4] == "1")
+                {
+                    BattleStart();
+                }
+            }
+            
+            
+            
                 Debug.Log("Подключение прервано!"); //соединение было прервано
                
-                Disconnect();
-            }
+              // Disconnect();
+
         }
+    }
+
+
+    void BattleStart() {
+        isInBattle = true;
+    }
+
+    void GenerateMob(string x, string y)
+    {
+        Debug.Log(float.Parse(x) +" "+ float.Parse(y));
+        Instantiate(mobToGen, new Vector3(float.Parse(x), -float.Parse(y),-1.0f), Quaternion.identity);
     }
 
     void Disconnect()
@@ -109,7 +132,7 @@ public class NetworkAdapter : MonoBehaviour {
             stream.Close();//отключение потока
         if (client != null)
             client.Close();//отключение клиента
-        Environment.Exit(0); //завершение процесса
+        
     }
 
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Threading;
 using System.Net.Sockets;
 using System.Security.Cryptography;
@@ -14,14 +14,16 @@ public class BlockchainConnector : MonoBehaviour {
     Thread th;
     // Use this for initialization
     void Start () {
-        client = new TcpClient();
-        client.Connect(host, port);
-        stream = client.GetStream();
+       
+            client = new TcpClient();
+            client.Connect(host, port);
+            stream = client.GetStream();
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Q)){
+        if (Input.GetKeyDown(KeyCode.O)){
             MakeMoney();
         }
 	}
@@ -31,3 +33,4 @@ public class BlockchainConnector : MonoBehaviour {
         stream.Write(Encoding.ASCII.GetBytes("Hello"), 0,5);
     }
 }
+*/
