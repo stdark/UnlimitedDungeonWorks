@@ -8,14 +8,18 @@ using UnityEngine;
 public class NetworkAdapter : MonoBehaviour {
     private const string host = "172.20.10.5";
     private const int port = 8888;
-    public GameObject mobToGen;
+   
     static TcpClient client;
     NetworkStream stream;
     Thread th;
     MD5 md5;
     string[] parsed;
+    string xCoord;
+    string yCoord;
+    public bool isInBattle = false;
+    public bool near = false;
 
-    bool isInBattle = false;
+    public MobGenerator mobGen;
     // Update is called once per frame
     private void Start()
     {
@@ -28,6 +32,10 @@ public class NetworkAdapter : MonoBehaviour {
     }
     void Update () {
         
+        if (mobGen.generateMob)
+        {
+            mobGen.MobGenerate(xCoord, yCoord);
+        }
         try
         {
             //подключение клиента
@@ -98,17 +106,22 @@ public class NetworkAdapter : MonoBehaviour {
             }
             if (parsed[3] == "1")
             {
+                xCoord = parsed[5];
+                yCoord = parsed[6];
+                mobGen.generateMob = true;
                 
-                GenerateMob(parsed[5], parsed[6]);
-                if (parsed[4] == "1")
-                {
-                    BattleStart();
-                }
+                    if (parsed[4] == "1")
+                    {
+                        BattleStart();
+                    }
+               
+                
             }
             
-            
-            
-                Debug.Log("Подключение прервано!"); //соединение было прервано
+           
+
+
+            Debug.Log("Подключение прервано!"); //соединение было прервано
                
               // Disconnect();
 
@@ -118,13 +131,29 @@ public class NetworkAdapter : MonoBehaviour {
 
     void BattleStart() {
         isInBattle = true;
+        
+        
+        
+    }
+    public void SendAttack(float x, float y)
+    {
+        byte id = 1;
+
+        byte[] head = { 0x07, id, 1, byte.Parse(x.ToString()), byte.Parse((-y).ToString()) };
+        byte[] body = { byte.Parse(mobGen.FindMobX("Troll").ToString()), byte.Parse((-mobGen.FindMobY("Troll")).ToString()), 1 };
+
+
+        //byte[] hash = md5.ComputeHash(Encoding.Unicode.GetBytes(Encoding.Unicode.GetString(head) + body.ToString()));
+        string temp = "";
+        stream.Write(Encoding.ASCII.GetBytes(Encoding.ASCII.GetString(head) + Encoding.ASCII.GetString(body)), 0, Encoding.ASCII.GetBytes(Encoding.ASCII.GetString(head) + Encoding.ASCII.GetString(body)).Length);
+        foreach (byte b in Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(Encoding.ASCII.GetString(head) + Encoding.ASCII.GetString(body))))
+        {
+            temp += b.ToString() + " ";
+        }
+        Debug.Log(temp);
     }
 
-    void GenerateMob(string x, string y)
-    {
-        Debug.Log(float.Parse(x) +" "+ float.Parse(y));
-        Instantiate(mobToGen, new Vector3(float.Parse(x), -float.Parse(y),-1.0f), Quaternion.identity);
-    }
+
 
     void Disconnect()
     {

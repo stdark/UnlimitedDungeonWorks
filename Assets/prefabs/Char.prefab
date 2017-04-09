@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4690818169967004}
   - component: {fileID: 212900718034161978}
   m_Layer: 0
-  m_Name: troll
+  m_Name: char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,6 +224,8 @@ MonoBehaviour:
   Chr: 0
   ObjectMass: []
   InterMass: []
+  mousePos: {x: 0, y: 0, z: 0}
+  mouseposcamera: {x: 0, y: 0, z: 0}
   Inv: {fileID: 0}
 --- !u!124 &124170790131868478
 Behaviour:

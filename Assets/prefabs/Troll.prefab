@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4929275795989418}
-  - component: {fileID: 114866555670466472}
   - component: {fileID: 61120302517657720}
+  - component: {fileID: 114063909792416450}
   m_Layer: 0
   m_Name: Troll
   m_TagString: Untagged
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1781723686133784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4929275795989418}
@@ -96,7 +96,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114866555670466472
+--- !u!114 &114063909792416450
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -104,13 +104,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1179218201218662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c957d6d1128e0304aa7aba018822aafb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f90717f3f7bad04c977e01129dc3c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterName: 
   CharacterRace: 0
   CharacterClass: 0
-  go: {fileID: 0}
   Hits: 0
   Str: 0
   Agi: 0
@@ -118,9 +117,9 @@ MonoBehaviour:
   Int: 0
   Wis: 0
   Chr: 0
-  ObjectMass: []
-  InterMass: []
-  Inv: {fileID: 0}
+  x: 0
+  y: 0
+  sp: {fileID: 21300000, guid: 1ee803373df206d40b630af63f8478ce, type: 3}
 --- !u!212 &212574947291981010
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class CharacterBase : MonoBehaviour {
 
     public string CharacterName;
@@ -12,6 +12,9 @@ public class CharacterBase : MonoBehaviour {
     public int Str, Agi, Vit, Int, Wis, Chr;
     public GameObject[] ObjectMass;
     public BoxCollider2D[] InterMass;
+    Camera camera;
+    public Vector3 mousePos;
+    public Vector3 mouseposcamera;
 
     public GameObject Inv;
     private void Start()
@@ -24,6 +27,7 @@ public class CharacterBase : MonoBehaviour {
 
     private void Update()
     {
+        //Ray ray = camera.ScreenPointToRay(Input.mousePosition.x);
         if (!Inv.active)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow)) MoveUp();
@@ -35,11 +39,24 @@ public class CharacterBase : MonoBehaviour {
                 gameObject.transform.position = new Vector3(63.0f, -118.0f);
             }
             else if (gameObject.transform.position == new Vector3(63.0f, -119.0f, gameObject.transform.position.z)) gameObject.transform.position = new Vector3(14.0f, -3.0f, gameObject.transform.position.z - 1.0f);
+
+            Debug.Log(Math.Abs(transform.position.x - go.mobGen.FindMobX("Troll")) + ":" + Math.Abs(transform.position.y - (go.mobGen.FindMobY("Troll"))));
+            if (Math.Abs(transform.position.x - go.mobGen.FindMobX("Troll")) <= 1.0f && Math.Abs(transform.position.y - (go.mobGen.FindMobY("Troll"))) <= 1.0f)
+                go.near = true;
+            else
+            {
+                go.near = false;
+            }
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                
+                attack();
+            }
         }
     }
     void MoveLeft()
     {
-        GameObject.Find("troll").transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
+        GameObject.Find("char").transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
         gameObject.transform.position += new Vector3(-1.0f,0);
         foreach (GameObject pgo in ObjectMass)
         {
@@ -51,7 +68,7 @@ public class CharacterBase : MonoBehaviour {
     }
     void MoveRight()
     {
-        GameObject.Find("troll").transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        GameObject.Find("char").transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         gameObject.transform.position += new Vector3(1.0f, 0);
         foreach (GameObject pgo in ObjectMass)
         {
@@ -81,4 +98,14 @@ public class CharacterBase : MonoBehaviour {
     {
 
     }
+    void attack()
+    {
+
+        if (go.isInBattle && go.near)
+        {
+            go.SendAttack(transform.position.x - 1.0f, transform.position.y);
+        }
+
+    }
+
 }
