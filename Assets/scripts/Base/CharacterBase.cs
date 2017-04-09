@@ -12,7 +12,6 @@ public class CharacterBase : MonoBehaviour {
     public int Str, Agi, Vit, Int, Wis, Chr;
     public GameObject[] ObjectMass;
     public BoxCollider2D[] InterMass;
-    Camera camera;
     public Vector3 mousePos;
     public Vector3 mouseposcamera;
 

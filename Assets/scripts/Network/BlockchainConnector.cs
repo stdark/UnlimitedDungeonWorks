@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Threading;
 using System.Net.Sockets;
 using System.Security.Cryptography;
@@ -70,4 +70,4 @@ public class BlockchainConnector : MonoBehaviour
             client.Close();//отключение клиента 
 
     }
-}
+}*/
