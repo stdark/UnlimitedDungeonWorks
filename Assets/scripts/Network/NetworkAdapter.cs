@@ -54,7 +54,7 @@ public class NetworkAdapter : MonoBehaviour {
     public void SendPos(float x, float y,byte n)
     {
         //0x07 id-host 0 x y n hash
-        byte id = 1;
+        byte id = byte.Parse(Parameters.Inst.id);
 
         byte[] head = { 0x07, id, 0, byte.Parse(x.ToString()) , byte.Parse((-y).ToString()) };
         byte[] body = { byte.Parse(n.ToString()) };
@@ -137,7 +137,7 @@ public class NetworkAdapter : MonoBehaviour {
     }
     public void SendAttack(float x, float y)
     {
-        byte id = 1;
+        byte id = byte.Parse(Parameters.Inst.id);
 
         byte[] head = { 0x07, id, 1, byte.Parse(x.ToString()), byte.Parse((-y).ToString()) };
         byte[] body = { byte.Parse(mobGen.FindMobX("Troll").ToString()), byte.Parse((-mobGen.FindMobY("Troll")).ToString()), 1 };

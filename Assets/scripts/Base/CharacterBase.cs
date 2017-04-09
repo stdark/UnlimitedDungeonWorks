@@ -39,7 +39,7 @@ public class CharacterBase : MonoBehaviour {
             }
             else if (gameObject.transform.position == new Vector3(63.0f, -119.0f, gameObject.transform.position.z)) gameObject.transform.position = new Vector3(14.0f, -3.0f, gameObject.transform.position.z - 1.0f);
 
-            Debug.Log(Math.Abs(transform.position.x - go.mobGen.FindMobX("Troll")) + ":" + Math.Abs(transform.position.y - (go.mobGen.FindMobY("Troll"))));
+            //Debug.Log(Math.Abs(transform.position.x - go.mobGen.FindMobX("Troll")) + ":" + Math.Abs(transform.position.y - (go.mobGen.FindMobY("Troll"))));
             if (Math.Abs(transform.position.x - go.mobGen.FindMobX("Troll")) <= 1.0f && Math.Abs(transform.position.y - (go.mobGen.FindMobY("Troll"))) <= 1.0f)
                 go.near = true;
             else
