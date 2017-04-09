@@ -5,4 +5,5 @@ using UnityEngine;
 class Parameters {
     public static Parameters Inst = new Parameters();
     public string id = "0";
+    public string tugriks = "";
 }

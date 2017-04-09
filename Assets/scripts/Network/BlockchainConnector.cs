@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Threading;
 using System.Net.Sockets;
 using System.Security.Cryptography;
@@ -13,10 +13,11 @@ public class BlockchainConnector : MonoBehaviour
     static TcpClient client;
     NetworkStream stream;
     Thread th;
+
     // Use this for initialization
     void Start()
     {
-
+        System.Diagnostics.Process.Start("D:/Projects/UnlimitedDungeonWorks/Assets/blockchain_integration/SERV.exe");
         client = new TcpClient();
         client.Connect(host, port);
         stream = client.GetStream();
@@ -52,7 +53,7 @@ public class BlockchainConnector : MonoBehaviour
 
             string message = builder.ToString();
             Debug.Log(message);
-
+            Parameters.Inst.tugriks = message;
 
         }
 
@@ -70,4 +71,4 @@ public class BlockchainConnector : MonoBehaviour
             client.Close();//отключение клиента 
 
     }
-}*/
+}

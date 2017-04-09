@@ -1,0 +1,7 @@
+﻿  Source.cpp
+Source.cpp(199): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода
+  All 179 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  SERV.vcxproj -> C:\Users\User\Desktop\hackaton\SERV\Release\SERV.exe
+  SERV.vcxproj -> C:\Users\User\Desktop\hackaton\SERV\Release\SERV.pdb (Full PDB)

@@ -67,7 +67,7 @@ public class NetworkAdapter : MonoBehaviour {
         {
             temp += b.ToString() + " ";
         }
-        Debug.Log(temp);
+        Debug.Log("Send: "+temp);
         
     }
     /*public void SendPos()
@@ -97,7 +97,7 @@ public class NetworkAdapter : MonoBehaviour {
                 while (stream.DataAvailable);
 
                 string message = builder.ToString();
-                Debug.Log(message);//вывод сообщения
+                Debug.Log("Get: " + message);//вывод сообщения
 
             parsed = message.Split(' ');
             if (isInBattle)
@@ -150,7 +150,7 @@ public class NetworkAdapter : MonoBehaviour {
         {
             temp += b.ToString() + " ";
         }
-        Debug.Log(temp);
+        Debug.Log("Send: " + temp);
     }
 
 
