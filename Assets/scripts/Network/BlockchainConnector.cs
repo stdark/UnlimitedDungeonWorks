@@ -4,7 +4,7 @@ using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
-
+using System.IO;
 public class BlockchainConnector : MonoBehaviour
 {
 
@@ -12,12 +12,13 @@ public class BlockchainConnector : MonoBehaviour
     private const int port = 47016;
     static TcpClient client;
     NetworkStream stream;
+    
     Thread th;
 
     // Use this for initialization
     void Start()
     {
-        System.Diagnostics.Process.Start("D:/Projects/UnlimitedDungeonWorks/Assets/blockchain_integration/SERV.exe");
+        System.Diagnostics.Process.Start(Directory.GetCurrentDirectory()+"SERV.exe");
         client = new TcpClient();
         client.Connect(host, port);
         stream = client.GetStream();
@@ -29,10 +30,7 @@ public class BlockchainConnector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            MakeMoney();
-        }
+        
     }
 
     void ReceiveMessage()
@@ -59,7 +57,7 @@ public class BlockchainConnector : MonoBehaviour
 
     }
 
-    void MakeMoney()
+    public void MakeMoney()
     {
         stream.Write(Encoding.ASCII.GetBytes("Hello"), 0, 5);
     }

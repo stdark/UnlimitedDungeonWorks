@@ -790,6 +790,7 @@ MonoBehaviour:
   isInBattle: 0
   near: 0
   mobGen: {fileID: 2022433741}
+  BlockchainAdapter: {fileID: 1787264741}
 --- !u!4 &454353631
 Transform:
   m_ObjectHideFlags: 0

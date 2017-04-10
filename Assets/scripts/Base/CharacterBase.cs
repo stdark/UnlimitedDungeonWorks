@@ -49,6 +49,8 @@ public class CharacterBase : MonoBehaviour {
             if (Input.GetKey(KeyCode.Alpha1))
             {
                 
+                go.BlockchainAdapter.MakeMoney();
+                
                 attack();
             }
         }

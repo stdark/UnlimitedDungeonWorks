@@ -11,6 +11,7 @@ public class NetworkAdapter : MonoBehaviour {
    
     static TcpClient client;
     NetworkStream stream;
+    
     Thread th;
     MD5 md5;
     string[] parsed;
@@ -20,6 +21,7 @@ public class NetworkAdapter : MonoBehaviour {
     public bool near = false;
 
     public MobGenerator mobGen;
+    public BlockchainConnector BlockchainAdapter;
     // Update is called once per frame
     private void Start()
     {
